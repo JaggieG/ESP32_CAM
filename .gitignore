@@ -1,3 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 *.vdi
+HASSIO/HASSIO/HASSIO.nvram
+HASSIO/HASSIO/HASSIO.vbox
+HASSIO/HASSIO/HASSIO.vbox-prev
+*.1
+*.2
+*.3
+*.sav
+*.nvram
