@@ -40,20 +40,24 @@ void loop() {
 
 
   if(ALERT_RECEIVED_PERSON) {
-   buzzer.personBuzz();
-   LED_alert_recieved.turnOnLEDForXSeconds(4);
+    
+   LED_alert_recieved.turnOnLED();
+         buzzer.personBuzz();
+   LED_alert_recieved.turnOffLED();
    webserver.setAlertStatusPERSON(false);
   }
 
   if(ALERT_RECEIVED_ANIMAL) {
-   buzzer.animalBuzz();
-   LED_alert_recieved.turnOnLEDForXSeconds(4);
+   LED_alert_recieved.turnOnLED();
+       buzzer.animalBuzz();
+   LED_alert_recieved.turnOffLED();
    webserver.setAlertStatusANIMAL(false);
   }
 
   if(ALERT_RECEIVED_CAR) {
-   buzzer.carBuzz();
-   LED_alert_recieved.turnOnLEDForXSeconds(4);
+   LED_alert_recieved.turnOnLED();
+     buzzer.carBuzz();
+   LED_alert_recieved.turnOffLED();
    webserver.setAlertStatusCAR(false);
   }
 

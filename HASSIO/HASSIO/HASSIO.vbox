@@ -6,16 +6,18 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.16-windows">
-  <Machine uuid="{3240e5b6-e44a-4c68-8e1e-9caf117f1ccb}" name="HASSIO" OSType="Linux_64" currentSnapshot="{936e2ec0-2fcf-4d2c-881d-9811b1c3233f}" snapshotFolder="Snapshots" lastStateChange="2022-03-21T19:24:30Z">
+  <Machine uuid="{3240e5b6-e44a-4c68-8e1e-9caf117f1ccb}" name="HASSIO" OSType="Linux_64" currentSnapshot="{a503041c-872a-4af3-aa8b-e9a76e2c5af5}" snapshotFolder="Snapshots" lastStateChange="2022-03-27T20:00:02Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{c2c44412-4d61-4878-907a-c64c6c58a8b7}" location="haos_ova-7.5.vdi" format="VDI" type="Normal">
-          <HardDisk uuid="{7f88f404-0688-431a-88f0-5cebed725a27}" location="Snapshots/{7f88f404-0688-431a-88f0-5cebed725a27}.vdi" format="VDI"/>
+          <HardDisk uuid="{7f88f404-0688-431a-88f0-5cebed725a27}" location="Snapshots/{7f88f404-0688-431a-88f0-5cebed725a27}.vdi" format="VDI">
+            <HardDisk uuid="{6c93e5d8-1d89-43db-96da-d4871289819b}" location="Snapshots/{6c93e5d8-1d89-43db-96da-d4871289819b}.vdi" format="VDI"/>
+          </HardDisk>
         </HardDisk>
       </HardDisks>
     </MediaRegistry>
     <ExtraData>
-      <ExtraDataItem name="GUI/LastCloseAction" value="SaveState"/>
+      <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
       <ExtraDataItem name="GUI/LastNormalWindowPosition" value="498,150,1024,810"/>
     </ExtraData>
     <Snapshot uuid="{936e2ec0-2fcf-4d2c-881d-9811b1c3233f}" name="CAM 1 + 2 in place" timeStamp="2022-03-20T21:25:08Z" stateFile="Snapshots/2022-03-20T21-25-08-222093900Z.sav">
@@ -69,6 +71,60 @@
           <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
         </StorageController>
       </StorageControllers>
+      <Snapshots>
+        <Snapshot uuid="{a503041c-872a-4af3-aa8b-e9a76e2c5af5}" name="Working Setup" timeStamp="2022-03-27T18:27:05Z" stateFile="Snapshots/2022-03-27T18-27-05-798414900Z.sav">
+          <Hardware>
+            <CPU count="3">
+              <PAE enabled="true"/>
+              <LongMode enabled="true"/>
+              <X2APIC enabled="true"/>
+              <HardwareVirtExLargePages enabled="true"/>
+            </CPU>
+            <Memory RAMSize="4096"/>
+            <Firmware type="EFI"/>
+            <HID Pointing="USBTablet"/>
+            <Display controller="VMSVGA" VRAMSize="20"/>
+            <VideoCapture screens="1" file="." fps="25"/>
+            <BIOS>
+              <IOAPIC enabled="true"/>
+              <NVRAM path="Snapshots\2022-03-27T18-27-21-214847400Z.nvram"/>
+              <SmbiosUuidLittleEndian enabled="true"/>
+            </BIOS>
+            <USB>
+              <Controllers>
+                <Controller name="OHCI" type="OHCI"/>
+              </Controllers>
+            </USB>
+            <Network>
+              <Adapter slot="0" enabled="true" MACAddress="080027E0D41A" promiscuousModePolicy="AllowAll" type="82540EM">
+                <DisabledModes>
+                  <InternalNetwork name="intnet"/>
+                  <NATNetwork name="NatNetwork"/>
+                </DisabledModes>
+                <BridgedInterface name="Qualcomm QCA61x4A 802.11ac Wireless Adapter"/>
+              </Adapter>
+            </Network>
+            <AudioAdapter controller="HDA" driver="DirectSound" enabled="true" enabledIn="false"/>
+            <RTC localOrUTC="UTC"/>
+            <Clipboard/>
+            <GuestProperties>
+              <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1648405619091114300" flags="RDONLYGUEST"/>
+              <GuestProperty name="/VirtualBox/HostInfo/VBoxRev" value="144080" timestamp="1648391398599807102" flags="TRANSIENT, RDONLYGUEST"/>
+              <GuestProperty name="/VirtualBox/HostInfo/VBoxVer" value="6.1.22" timestamp="1648391398599807100" flags="TRANSIENT, RDONLYGUEST"/>
+              <GuestProperty name="/VirtualBox/HostInfo/VBoxVerExt" value="6.1.22" timestamp="1648391398599807101" flags="TRANSIENT, RDONLYGUEST"/>
+              <GuestProperty name="/VirtualBox/VMInfo/ResumeCounter" value="5" timestamp="1648391591755189100" flags="TRANSIENT, RDONLYGUEST"/>
+            </GuestProperties>
+          </Hardware>
+          <StorageControllers>
+            <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
+              <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
+                <Image uuid="{7f88f404-0688-431a-88f0-5cebed725a27}"/>
+              </AttachedDevice>
+              <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
+            </StorageController>
+          </StorageControllers>
+        </Snapshot>
+      </Snapshots>
     </Snapshot>
     <Hardware>
       <CPU count="3">
@@ -104,17 +160,13 @@
       <RTC localOrUTC="UTC"/>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1647890641889513700" flags="RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxRev" value="144080" timestamp="1647889077038357702" flags="TRANSIENT, RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxVer" value="6.1.22" timestamp="1647889077038357700" flags="TRANSIENT, RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxVerExt" value="6.1.22" timestamp="1647889077038357701" flags="TRANSIENT, RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/VMInfo/ResumeCounter" value="4" timestamp="1647889077038357701" flags="TRANSIENT, RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1648411199844832600" flags="RDONLYGUEST"/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
       <StorageController name="IDE" type="PIIX4" PortCount="2" useHostIOCache="true" Bootable="true">
         <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-          <Image uuid="{7f88f404-0688-431a-88f0-5cebed725a27}"/>
+          <Image uuid="{6c93e5d8-1d89-43db-96da-d4871289819b}"/>
         </AttachedDevice>
         <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0"/>
       </StorageController>

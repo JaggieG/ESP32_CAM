@@ -21,6 +21,7 @@ void JAG_Buzzer::buzzForXSeconds(int seconds) {
 
 void JAG_Buzzer::animalBuzz() {
   //3 Buzzes
+     Serial.println("Animal Alert");
   delay(500);
    digitalWrite(pin_, LOW);
     delay(500);
@@ -40,6 +41,7 @@ void JAG_Buzzer::animalBuzz() {
 
 void JAG_Buzzer::carBuzz() {
    //2 Buzzes
+   Serial.println("Car Alert");
   delay(500);
    digitalWrite(pin_, LOW);
     delay(500);
@@ -55,6 +57,7 @@ void JAG_Buzzer::carBuzz() {
 
 void JAG_Buzzer::personBuzz() {
   // one long buzz
+  Serial.println("Person Alert");
    digitalWrite(pin_, HIGH);
    delay(3000);
    digitalWrite(pin_, LOW);
