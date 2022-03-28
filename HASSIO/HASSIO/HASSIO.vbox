@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.16-windows">
-  <Machine uuid="{3240e5b6-e44a-4c68-8e1e-9caf117f1ccb}" name="HASSIO" OSType="Linux_64" currentSnapshot="{a503041c-872a-4af3-aa8b-e9a76e2c5af5}" snapshotFolder="Snapshots" lastStateChange="2022-03-27T20:00:02Z">
+  <Machine uuid="{3240e5b6-e44a-4c68-8e1e-9caf117f1ccb}" name="HASSIO" OSType="Linux_64" currentSnapshot="{a503041c-872a-4af3-aa8b-e9a76e2c5af5}" snapshotFolder="Snapshots" lastStateChange="2022-03-28T19:37:25Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{c2c44412-4d61-4878-907a-c64c6c58a8b7}" location="haos_ova-7.5.vdi" format="VDI" type="Normal">
